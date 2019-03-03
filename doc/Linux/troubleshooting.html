@@ -1,65 +1,37 @@
-<HTML>
-<HEAD>
-<TITLE>Troubleshooting</TITLE>
-</HEAD>
-<BODY BGCOLOR=#FFFFFF>
-
-<H1>Troubleshooting</H1>
-
-<H2>SheepShaver doesn't boot</H2>
-
-SheepShaver should boot all MacOS versions &gt;=7.5.2, except MacOS X. However,
-your mileage may vary. If it doesn't boot, try again with extensions disabled
-(by pressing the shift key) and then remove some of these extensions:
-"MacOS Licensing Extension", Speed Doubler, 68k FPU extensions and MacsBug.
-
-<H2>The colors are wrong in 16 or 32 bit graphics modes</H2>
-
-If you're running SheepShaver on a something other than a PowerMac, it may be
-that 16 or 32 bit graphics modes show false colors due to the frame buffer being
-little-endian. Apart from patching the X server, there's unfortunately nothing
-that you or SheepShaver can do about this.
-
-<H2>Full-screen mode doesn't work</H2>
-
-Some X servers on Linux PPC don't support DGA and full-screen mode cannot be used
-with these (in this case, you should disable it in the "Graphics" settings). If you
-are seeing a message like "cannot map /dev/kmem (permission denied)", you have to
-either run SheepShaver as root (not recommended) or give yourself appropriate access
-rights to /dev/kmem if you can login as root.
-
-<H2>Ethernet doesn't work</H2>
-
-<UL>
-<LI>You have to either install the sheep_net driver or configure the ethertap device in the Linux kernel to use Ethernet. See <A HREF="using.html">Using SheepShaver</A> for more information.
-<LI>If you're using TCP/IP on the MacOS side, you have to set up different IP addresses for Linux and for the MacOS.
-</UL>
-
-<H2>SheepShaver crashes, but yesterday it worked</H2>
-
-Try the "Zap PRAM File" item in the main menu of the SheepShaver preferences editor.
-When you are using a ROM file and switching to a different ROM version, you <B>have</B>
-to zap the PRAM file or SheepShaver might behave very weird.
-
-<H2>Known incompatibilities</H2>
-
-<UL>
-<LI>MacOS programs or drivers which access Mac hardware directly are not supported by SheepShaver.
-<LI>Speed Doubler, RAM Doubler, 68k FPU emulators and similar programs don't run under SheepShaver.
-<LI>MacsBug is not compatible with SheepShaver.
-</UL>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Troubleshooting</title>
+</head>
+<body>
+<h1>Troubleshooting</h1>
+<h2>SheepShaver doesn't boot</h2>
+<p>SheepShaver should boot all MacOS versions &gt;=7.5.2, except MacOS X. However, your mileage may vary. If it doesn't boot, try again with extensions disabled (by pressing the shift key) and then remove some of these extensions: "MacOS Licensing Extension", Speed Doubler, 68k FPU extensions and MacsBug.</p>
+<h2>The colors are wrong in 16 or 32 bit graphics modes</h2>
+<p>If you're running SheepShaver on a something other than a PowerMac, it may be that 16 or 32 bit graphics modes show false colors due to the frame buffer being little-endian. Apart from patching the X server, there's unfortunately nothing that you or SheepShaver can do about this.</p>
+<h2>Full-screen mode doesn't work</h2>
+<p>Some X servers on Linux PPC don't support DGA and full-screen mode cannot be used with these (in this case, you should disable it in the "Graphics" settings). If you are seeing a message like "cannot map /dev/kmem (permission denied)", you have to either run SheepShaver as root (not recommended) or give yourself appropriate access rights to /dev/kmem if you can login as root.</p>
+<h2>Ethernet doesn't work</h2>
+<ul>
+<li>You have to either install the sheep_net driver or configure the ethertap device in the Linux kernel to use Ethernet. See <a href="using.html">Using SheepShaver</a> for more information.</li>
+<li>If you're using TCP/IP on the MacOS side, you have to set up different IP addresses for Linux and for the MacOS.</li>
+</ul>
+<h2>SheepShaver crashes, but yesterday it worked</h2>
+<p>Try the "Zap PRAM File" item in the main menu of the SheepShaver preferences editor. When you are using a ROM file and switching to a different ROM version, you <b>have</b> to zap the PRAM file or SheepShaver might behave very weird.</p>
+<h2>Known incompatibilities</h2>
+<ul>
+<li>MacOS programs or drivers which access Mac hardware directly are not supported by SheepShaver.</li>
+<li>Speed Doubler, RAM Doubler, 68k FPU emulators and similar programs don't run under SheepShaver.</li>
+<li>MacsBug is not compatible with SheepShaver.</li>
+</ul>
 <H2>Known bugs</H2>
-
-<UL>
-<LI>The QuickTime 2.5 Cinepak codec crashes the emulator.
-<LI>Programs that use InputSprockets crash the emulator when in window mode.
-<LI>The mouse cursor hotspot in window mode is not correct.
-</UL>
-
-<HR>
-<ADDRESS>
-SheepShaver User's Guide
-</ADDRESS>
-</BODY>
-</HTML>
+<ul>
+<li>The QuickTime 2.5 Cinepak codec crashes the emulator.</li>
+<li>Programs that use InputSprockets crash the emulator when in window mode.</li>
+<li>The mouse cursor hotspot in window mode is not correct.</li>
+</ul>
+<hr>
+<p><a href="index.html">SheepShaver User's Guide</a></p>
+</body>
+</html>
